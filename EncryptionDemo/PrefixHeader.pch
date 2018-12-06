@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  EncryptionDemo
+//
+//  Created by 王祖宇 on 2018/12/6.
+//  Copyright © 2018年 zuyu. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "NSString+ZuyuHash.h"
+
+#import "UINavigationController+ZuyuMemoryLeak.h"
+#import "UIViewController+ZuyuMemoryLeak.h"
+
+
+#ifdef DEBUG
+#define NSLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#else
+#define NSLog(format, ...)
+#endif
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

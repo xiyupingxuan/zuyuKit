@@ -16,6 +16,10 @@
 		BA99442221B67B3E0015545C /* EncryptionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99442121B67B3E0015545C /* EncryptionDemoTests.m */; };
 		BA99442D21B67B3E0015545C /* EncryptionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99442C21B67B3E0015545C /* EncryptionDemoUITests.m */; };
 		BA99445221B67C1E0015545C /* NSString+ZuyuHash.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99445121B67C1E0015545C /* NSString+ZuyuHash.m */; };
+		BA99445521B8B6C60015545C /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99445421B8B6C60015545C /* ReadViewController.m */; };
+		BA99445921B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99445821B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.m */; };
+		BA99445C21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99445B21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.m */; };
+		BA99445F21B8FE190015545C /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99445E21B8FE190015545C /* ViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,15 @@
 		BA99442E21B67B3E0015545C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA99445021B67C1E0015545C /* NSString+ZuyuHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZuyuHash.h"; sourceTree = "<group>"; };
 		BA99445121B67C1E0015545C /* NSString+ZuyuHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZuyuHash.m"; sourceTree = "<group>"; };
+		BA99445321B8B6C60015545C /* ReadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
+		BA99445421B8B6C60015545C /* ReadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
+		BA99445721B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZuyuMemoryLeak.h"; sourceTree = "<group>"; };
+		BA99445821B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZuyuMemoryLeak.m"; sourceTree = "<group>"; };
+		BA99445A21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ZuyuMemoryLeak.h"; sourceTree = "<group>"; };
+		BA99445B21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ZuyuMemoryLeak.m"; sourceTree = "<group>"; };
+		BA99445D21B8FE190015545C /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		BA99445E21B8FE190015545C /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		BA99446021B8FF9E0015545C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +97,7 @@
 		BA9943FC21B67B3D0015545C = {
 			isa = PBXGroup;
 			children = (
+				BA99445621B8F0910015545C /* leaks */,
 				BA99440721B67B3D0015545C /* EncryptionDemo */,
 				BA99442021B67B3E0015545C /* EncryptionDemoTests */,
 				BA99442B21B67B3E0015545C /* EncryptionDemoUITests */,
@@ -108,8 +122,13 @@
 				BA99440921B67B3D0015545C /* AppDelegate.m */,
 				BA99440B21B67B3D0015545C /* ViewController.h */,
 				BA99440C21B67B3D0015545C /* ViewController.m */,
+				BA99445D21B8FE190015545C /* ViewController2.h */,
+				BA99445E21B8FE190015545C /* ViewController2.m */,
+				BA99445321B8B6C60015545C /* ReadViewController.h */,
+				BA99445421B8B6C60015545C /* ReadViewController.m */,
 				BA99445021B67C1E0015545C /* NSString+ZuyuHash.h */,
 				BA99445121B67C1E0015545C /* NSString+ZuyuHash.m */,
+				BA99446021B8FF9E0015545C /* PrefixHeader.pch */,
 				BA99440E21B67B3D0015545C /* Main.storyboard */,
 				BA99441121B67B3E0015545C /* Assets.xcassets */,
 				BA99441321B67B3E0015545C /* LaunchScreen.storyboard */,
@@ -135,6 +154,17 @@
 				BA99442E21B67B3E0015545C /* Info.plist */,
 			);
 			path = EncryptionDemoUITests;
+			sourceTree = "<group>";
+		};
+		BA99445621B8F0910015545C /* leaks */ = {
+			isa = PBXGroup;
+			children = (
+				BA99445721B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.h */,
+				BA99445821B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.m */,
+				BA99445A21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.h */,
+				BA99445B21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.m */,
+			);
+			path = leaks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA99445521B8B6C60015545C /* ReadViewController.m in Sources */,
 				BA99440D21B67B3D0015545C /* ViewController.m in Sources */,
 				BA99445221B67C1E0015545C /* NSString+ZuyuHash.m in Sources */,
+				BA99445C21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.m in Sources */,
+				BA99445921B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.m in Sources */,
+				BA99445F21B8FE190015545C /* ViewController2.m in Sources */,
 				BA99441821B67B3E0015545C /* main.m in Sources */,
 				BA99440A21B67B3D0015545C /* AppDelegate.m in Sources */,
 			);
@@ -440,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = /Users/Xuanyu/Desktop/github/EncryptionDemo/EncryptionDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = EncryptionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = /Users/Xuanyu/Desktop/github/EncryptionDemo/EncryptionDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = EncryptionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

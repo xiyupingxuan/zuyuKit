@@ -208,6 +208,11 @@
     return [self stringFromBytes:buffer length:CC_SHA512_DIGEST_LENGTH];
 }
 
+
+
+
+
+
 /**
  *  返回二进制 Bytes 流的字符串表示形式
  *

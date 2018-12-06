@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (ZuyuHash)
+
+
 #pragma mark - 散列函数
 /**
  *  计算MD5散列结果
