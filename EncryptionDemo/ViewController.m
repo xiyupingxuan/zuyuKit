@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ViewController2.h"
+#import "UUID.h"
 @interface ViewController ()
 
 
@@ -21,6 +22,13 @@
     [self.navigationController pushViewController:[[ViewController2 alloc] init] animated:YES];
     
     
+    /**
+        获取 uuid
+     */
+    
+   NSString *uuid =  [UUID getUUID];
+   
+    NSLog(@"UUID ----->>>>.  %@",uuid);
 //    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
 //    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://m.baidu.com/tcx?appui=alaxs&data=%7B%22fromaction%22%3A%22aladdintrans%22%7D&page=detail&gid=1695774947&sign=407da345977ec874651b3b68a1a76ab9&ts=1531682508&sourceurl=http%3A%2F%2Fwww.999wx.com%2Farticle%2F7%2F7270%2FDefault.shtml&evt=layerNextChapter&cid=1695774947%7C10119249387338904736&url=http%3A%2F%2Fwww.lingdiankanshu.com%2FHtml%2FBook%2F13%2F13739%2F6284246.html"]];
 //    [self.view addSubview:webView];

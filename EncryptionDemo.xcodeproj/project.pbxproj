@@ -20,6 +20,8 @@
 		BA99445921B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99445821B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.m */; };
 		BA99445C21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99445B21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.m */; };
 		BA99445F21B8FE190015545C /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99445E21B8FE190015545C /* ViewController2.m */; };
+		BA99446621B90C790015545C /* UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99446321B90C790015545C /* UUID.m */; };
+		BA99446721B90C790015545C /* KeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BA99446521B90C790015545C /* KeyChainStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		BA99445D21B8FE190015545C /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		BA99445E21B8FE190015545C /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		BA99446021B8FF9E0015545C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BA99446221B90C790015545C /* UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUID.h; sourceTree = "<group>"; };
+		BA99446321B90C790015545C /* UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUID.m; sourceTree = "<group>"; };
+		BA99446421B90C790015545C /* KeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainStore.h; sourceTree = "<group>"; };
+		BA99446521B90C790015545C /* KeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		BA9943FC21B67B3D0015545C = {
 			isa = PBXGroup;
 			children = (
+				BA99446121B90C590015545C /* UUID */,
 				BA99445621B8F0910015545C /* leaks */,
 				BA99440721B67B3D0015545C /* EncryptionDemo */,
 				BA99442021B67B3E0015545C /* EncryptionDemoTests */,
@@ -165,6 +172,17 @@
 				BA99445B21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.m */,
 			);
 			path = leaks;
+			sourceTree = "<group>";
+		};
+		BA99446121B90C590015545C /* UUID */ = {
+			isa = PBXGroup;
+			children = (
+				BA99446421B90C790015545C /* KeyChainStore.h */,
+				BA99446521B90C790015545C /* KeyChainStore.m */,
+				BA99446221B90C790015545C /* UUID.h */,
+				BA99446321B90C790015545C /* UUID.m */,
+			);
+			path = UUID;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,12 +317,14 @@
 			files = (
 				BA99445521B8B6C60015545C /* ReadViewController.m in Sources */,
 				BA99440D21B67B3D0015545C /* ViewController.m in Sources */,
+				BA99446621B90C790015545C /* UUID.m in Sources */,
 				BA99445221B67C1E0015545C /* NSString+ZuyuHash.m in Sources */,
 				BA99445C21B8F9100015545C /* UINavigationController+ZuyuMemoryLeak.m in Sources */,
 				BA99445921B8F0D70015545C /* UIViewController+ZuyuMemoryLeak.m in Sources */,
 				BA99445F21B8FE190015545C /* ViewController2.m in Sources */,
 				BA99441821B67B3E0015545C /* main.m in Sources */,
 				BA99440A21B67B3D0015545C /* AppDelegate.m in Sources */,
+				BA99446721B90C790015545C /* KeyChainStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
